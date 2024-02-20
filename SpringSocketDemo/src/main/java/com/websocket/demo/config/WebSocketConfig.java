@@ -22,13 +22,15 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
 
     /**
-     * defined message passing endpoint
-     * @param registry
-     */
+    * Configures the message broker options for WebSocket communication.
+            *
+            * @param registry the MessageBrokerRegistry to configure
+    */
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         registry
                 .setApplicationDestinationPrefixes("/app")
                 .enableSimpleBroker("/topic");
     }
+
 }
